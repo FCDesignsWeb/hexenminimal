@@ -6,61 +6,75 @@ body {
   color: black;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
-  padding: 15px 20px;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: relative;
   border-bottom: 1px solid #eee;
 }
 
-/* IZQUIERDA */
+/* LOGO CENTRADO */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  height: 40px;
+}
+
+/* MENÚ */
 .nav-left {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-left a {
   text-decoration: none;
   color: black;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
-/* CENTRO */
-.nav-center {
-  text-align: center;
+.nav-left a:hover {
+  opacity: 0.5;
 }
 
-.logo {
-  width: 180px;
-  height: auto;
-}
-
-/* DERECHA */
-.nav-right {
-  display: flex;
-  justify-content: flex-end;
-}
-
+/* BUSCADOR */
 .buscador {
-  padding: 6px 10px;
-  border: 1px solid #ccc;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
 }
 
-/* HERO */
+/* HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ================= HERO ================= */
+
 .hero {
   position: relative;
   height: 90vh;
 }
 
-/* IMAGEN */
 .hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* CAJA VIDRIO */
 .hero-texto {
   position: absolute;
   top: 55%;
@@ -72,78 +86,69 @@ body {
 
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 
   border-radius: 20px;
-  text-align: left;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* TITULO */
 .hero-texto h1 {
   margin: 0;
   font-size: 26px;
 }
 
-/* LISTA */
-.hero-texto ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
 .hero-texto li {
-  margin-bottom: 6px;
   font-size: 14px;
 }
 
-/* TEXTO FINAL */
 .descripcion {
-  margin-top: 10px;
   font-size: 14px;
   font-style: italic;
 }
 
-/* SECCIONES */
+/* ================= INTRO ================= */
+
+.intro {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.intro h2 {
+  font-size: 32px;
+}
+
+.intro h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.intro p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ================= GRID ================= */
+
 .categoria {
   padding: 60px 20px;
 }
 
-.categoria h2 {
-  margin-top: 50px;
-}
-
-/* GRID HOGAR */
-.grid-hogar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-}
-
-.grid-hogar img {
-  width: 100%;
-  border-radius: 20px;
-}
-
-/* TITULOS TIENDA */
-.categoria h3 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  font-size: 22px;
-}
-
-/* GRID TIENDA */
+.grid-hogar,
 .grid-tienda {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 
+.grid-hogar img,
 .grid-tienda img {
   width: 100%;
   border-radius: 20px;
+}
+
+.grid-tienda img {
   transition: 0.3s;
 }
 
@@ -151,8 +156,24 @@ body {
   transform: scale(1.03);
 }
 
+/* ================= TITULOS ================= */
 
-/* BOTON */
+.titulo-tienda {
+  font-size: 48px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitulo-tienda,
+.titulo-hogar {
+  font-size: 28px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ================= BOTONES ================= */
+
 .btn {
   display: inline-block;
   padding: 12px 25px;
@@ -167,57 +188,8 @@ body {
   color: white;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-}
-/* INTRO */
-.intro {
-  max-width: 800px;
-  margin: 100px auto;
-  padding: 0 20px;
-  text-align: left;
-}
+/* ================= CONTACTO ================= */
 
-/* TITULO */
-.intro h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-/* SUBTITULO */
-.intro h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: normal;
-}
-
-/* PÁRRAFOS */
-.intro p {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-.titulo-hogar {
-  font-size: 42px;
-  font-weight: 300;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif; /* o después cambiamos */
-}
-/* HERO CONTACTO */
-.contacto-hero {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.contacto-hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-/* CONTENEDOR */
 .contacto-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -227,16 +199,6 @@ footer {
   padding: 20px;
 }
 
-/* INFO */
-.contacto-info h2 {
-  margin-bottom: 10px;
-}
-
-.redes {
-  margin-top: 20px;
-}
-
-/* FORM */
 .formulario {
   display: flex;
   flex-direction: column;
@@ -247,11 +209,6 @@ footer {
 .formulario textarea {
   padding: 10px;
   border: 1px solid #ccc;
-  font-family: inherit;
-}
-
-.formulario textarea {
-  min-height: 120px;
 }
 
 .formulario button {
@@ -259,7 +216,6 @@ footer {
   border: 1px solid black;
   background: white;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .formulario button:hover {
@@ -267,99 +223,60 @@ footer {
   color: white;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
-  .contacto-box {
-    grid-template-columns: 1fr;
-  }
-}
-.redes a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
+/* ================= FOOTER ================= */
 
-.redes a:hover {
-  text-decoration: underline;
-}
-/* TITULO TIENDA (tipo logo) */
-.titulo-tienda {
-  font-size: 48px;
-  font-weight: 300;
-  letter-spacing: 6px;
-  text-transform: uppercase;
+footer {
   text-align: center;
-  margin-bottom: 40px;
+  padding: 30px;
 }
 
-/* SUBTITULOS (igual que hogar) */
-.subtitulo-tienda {
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-/* 📱 MOBILE */
+/* ================= 📱 MOBILE PRO ================= */
+
 @media (max-width: 768px) {
 
-  /* NAVBAR */
-  .navbar {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .nav-left {
-    justify-content: center;
-    flex-wrap: wrap;
+  .menu-toggle {
+    display: block;
   }
 
   .nav-right {
+    display: none;
+  }
+
+  /* MENÚ FULLSCREEN */
+  .nav-left {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+
+  .nav-left a {
+    font-size: 22px;
+    margin: 15px 0;
+  }
+
+  .nav-left.active {
+    left: 0;
   }
 
   /* LOGO */
   .logo {
-    width: 140px;
+    height: 30px;
   }
 
-  /* HERO TEXTO */
-  .hero-texto {
-    padding: 20px;
-    max-width: 90%;
-    font-size: 14px;
-  }
-
-  .hero-texto h1 {
-    font-size: 20px;
-  }
-
-  /* INTRO */
-  .intro {
-    margin: 60px auto;
-  }
-
-  /* GRID → 1 columna */
+  /* GRID */
   .grid-hogar,
   .grid-tienda {
     grid-template-columns: 1fr;
   }
 
-  /* TITULOS */
-  .titulo-tienda {
-    font-size: 32px;
-  }
-
-  .subtitulo-tienda,
-  .titulo-hogar {
-    font-size: 24px;
-  }
-
-  /* CONTACTO */
   .contacto-box {
     grid-template-columns: 1fr;
   }
-
 }
