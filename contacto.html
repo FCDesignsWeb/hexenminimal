@@ -4,67 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | HEXEN</title>
-
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">☰</div>
 
-  <div class="nav-left">
+  <div class="nav-left" id="menu">
     <a href="index.html">Inicio</a>
     <a href="tienda.html">Tienda</a>
-    <a href="#">Contacto</a>
+    <a href="contacto.html">Contacto</a>
   </div>
 
   <div class="nav-center">
     <img src="logo.png" class="logo">
   </div>
-
-  <div class="nav-right">
-    <input type="text" placeholder="Buscar..." class="buscador">
-  </div>
-
 </nav>
 
-<!-- HERO CONTACTO -->
 <section class="contacto-hero">
   <h1>Contacto</h1>
-  <p>Podés escribirme para consultas, pedidos personalizados o asesoramiento.</p>
+  <p>Consultas y pedidos personalizados.</p>
 </section>
 
-<!-- BLOQUE CONTACTO -->
 <section class="contacto-box">
 
-  <div class="contacto-info">
+  <div>
     <h2>Hablemos</h2>
-    <p>Estamos disponibles para desarrollar piezas a medida o responder cualquier consulta.</p>
 
     <a href="https://wa.me/5492216176827" target="_blank" class="btn">
       WhatsApp
     </a>
-<p class="redes">
-  Instagram: 
-  <a href="https://www.instagram.com/hexentienda" target="_blank">
-    @hexentienda
-  </a>
-</p>
 
-  <!-- FORMULARIO -->
+    <p class="redes">
+      <a href="https://www.instagram.com/hexentienda" target="_blank">
+        @hexentienda
+      </a>
+    </p>
+  </div>
+
   <form class="formulario">
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Mensaje" required></textarea>
+    <input type="text" placeholder="Nombre">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Mensaje"></textarea>
     <button type="submit">Enviar</button>
   </form>
 
 </section>
 
 <footer>
-  <p>© 2026 HEXEN nuestro local calle 12 N° 1465 1/2 entre 62 y 63</p>
+  <p>© 2026 HEXEN</p>
 </footer>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
 
 </body>
 </html>
